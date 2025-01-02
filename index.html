@@ -45,14 +45,33 @@
             text-decoration: underline;
         }
 
+        
         .section {
-            padding: 40px 20px;
-            text-align: center;
-        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 20px;
+        text-align: left; /* Alinha o texto à esquerda */
+        line-height: 1.8; /* Espaçamento entre as linhas */
+        min-height: 100vh; /* Garante que a seção ocupa 100% da altura da página */
+    }
 
-        .section h2 {
-            color: #002855;
-        }
+    .section h2 {
+        color: #002855;
+        text-align: center; /* O título permanece centralizado */
+    }
+
+    .section ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+    }
+
+    .section ul li {
+        margin-bottom: 10px; /* Espaçamento entre os itens da lista */
+    }
 
         footer {
             background-color: #002855;
@@ -85,6 +104,23 @@
 
         .form-container button:hover {
             background-color: #003F7D;
+        }
+        @media (max-width: 768px) {
+        header {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        header img {
+            margin: 0 auto 15px auto;
+        }
+
+        nav {
+            flex-direction: column;
+        }
+
+        nav a {
+            margin: 10px 0;
         }
 
     </style>
