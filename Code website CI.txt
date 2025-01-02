@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controlideal - Engenharia e Gestão</title>
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #002855; /* Cor escura moderna */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #00509E;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            color: #002855;
+        }
+
+        footer {
+            background-color: #002855;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 20px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .form-container input, .form-container textarea, .form-container button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            background-color: #00509E;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #003F7D;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Controlideal</h1>
+        <p>Soluções em Engenharia e Gestão</p>
+    </header>
+
+    <nav>
+        <a href="#sobre">Sobre Nós</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#porque">Porquê a Controlideal</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <section id="sobre" class="section">
+        <h2>Sobre Nós</h2>
+        <p>A Controlideal é especializada em consultoria de engenharia e gestão, com foco em produção, transmissão e distribuição de energia. Nossa missão é oferecer soluções personalizadas para o sucesso de sua empresa.</p>
+    </section>
+
+    <section id="servicos" class="section">
+        <h2>Serviços</h2>
+        <ul>
+            <li>Consultoria em Produção, Transmissão e Distribuição de Energia</li>
+            <li>Processos de Gestão Empresarial</li>
+            <li>Controlo de Gestão e Aconselhamento Financeiro</li>
+        </ul>
+    </section>
+
+    <section id="porque" class="section">
+        <h2>Porquê a Controlideal</h2>
+        <p>Com anos de experiência no setor energético, a Controlideal oferece:</p>
+        <ul>
+            <li>Equipe experiente e altamente qualificada</li>
+            <li>Soluções personalizadas para cada cliente</li>
+            <li>Resultados comprovados e excelência em cada projeto</li>
+        </ul>
+    </section>
+
+    <section id="contato" class="section">
+        <h2>Contato</h2>
+        <div class="form-container">
+            <form>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Controlideal. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
