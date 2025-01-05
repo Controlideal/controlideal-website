@@ -176,31 +176,38 @@
             "services-2": "Project Management Consulting",
             "services-3": "Business Management Processes",
             "services-4": "Management Control and Financial Advisory",
-            "services-5": "Business and/or Company Valuations",
+            "services-5": "Company and/or Business Valuations",
             "services-6": "Business Plan",
             "services-7": "Risk Analysis",
             "why-title": "Why Controlideal",
             "why-1": "Experienced and highly qualified team",
-            "why-2": "Tailored solutions for each client",
-            "why-3": "Proven results and excellence in every project",
+            "why-2": "Customized solutions for each client",
+            "why-3": "Proven results and excellence in each project",
             "contact-title": "Contact",
             "name-label": "Name:",
             "email-label": "Email:",
             "message-label": "Message:",
             "submit-button": "Submit",
-            "footer-text": "2025 Controlideal. All rights reserved."
+            "footer-text": "&copy; 2025 Controlideal. All rights reserved."
         };
 
         function toggleLanguage() {
-            const lang = document.documentElement.lang === "pt" ? "en" : "pt";
-            document.documentElement.lang = lang;
+            const isEnglish = document.documentElement.lang === "en";
 
-            Object.keys(translations).forEach(key => {
-                const element = document.getElementById(key);
-                if (element) {
-                    element.textContent = translations[key];
+            if (isEnglish) {
+                document.documentElement.lang = "pt";
+                document.getElementById("toggle-language").textContent = "English";
+            } else {
+                document.documentElement.lang = "en";
+                document.getElementById("toggle-language").textContent = "Português";
+            }
+
+            // Loop through the translation keys and set the text to the appropriate language
+            for (const key in translations) {
+                if (translations.hasOwnProperty(key)) {
+                    document.getElementById(key).textContent = translations[key];
                 }
-            });
+            }
         }
     </script>
 </body>
