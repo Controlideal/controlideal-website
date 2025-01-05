@@ -9,205 +9,199 @@
     <meta name="description" content="Controlideal - Soluções em Engenharia e Gestão. Consultoria em produção, energia, controlo de gestão e mais.">
     <meta name="keywords" content="engenharia, gestão, consultoria, energia, controlo de gestão, torres novas, portugal, eletricidade, redes aéreas mt">
     <meta name="author" content="Controlideal">
+    
     <style>
         body {
-            font-family: 'Lato', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #E3F2FD;
+            font-family: 'Lato', sans-serif; margin: 0; padding: 0; box-sizing: border-box; background-color: #E3F2FD;
         }
+
         header {
-            background-color: #002855;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
+            background-color: #002855; /* Cor escura moderna */ color: #fff; padding: 20px; text-align: center;
         }
+
         nav {
-            display: flex;
-            justify-content: center;
-            background-color: #00509E;
-            padding: 10px;
+            display: flex; justify-content: center; background-color: #00509E; padding: 10px;
         }
+
         nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
+            color: #fff; text-decoration: none; margin: 0 15px; font-weight: bold;
         }
+
         nav a:hover {
             text-decoration: underline;
         }
+ 
         .section {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 40px 20px;
-            text-align: left;
-            line-height: 1.8;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 40px 20px; text-align: left; /* Alinha o texto à esquerda */ line-height: 1.8; /* Espaçamento entre as linhas */
         }
+
         .section h2 {
-            color: #002855;
-            text-align: center;
+            color: #002855; text-align: center; /* O título permanece centralizado */
         }
+
         .section ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            text-align: left;
+            list-style: none; padding: 0; margin: 0; text-align: left;
         }
+
         .section ul li {
-            margin-bottom: 10px;
+            margin-bottom: 10px; /* Espaçamento entre os itens da lista */
         }
+
         footer {
-            background-color: #002855;
-            color: white;
-            text-align: center;
-            padding: 20px 10px;
-            margin-top: 20px;
+            background-color: #002855; color: white; text-align: center; padding: 20px 10px; margin-top: 20px;
         }
+
         .form-container {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: left;
+            max-width: 600px; margin: 0 auto; text-align: left;
         }
-        .form-container input,
-        .form-container textarea,
+
+        .form-container input, .form-container textarea, .form-container button {
+            width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;
+        }
+
         .form-container button {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            background-color: #00509E; color: white; border: none; cursor: pointer;
         }
-        .form-container button {
-            background-color: #00509E;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
+
         .form-container button:hover {
             background-color: #003F7D;
         }
-        .lang-button {
-            margin: 20px auto;
-            padding: 10px 20px;
-            background-color: #00509E;
-            color: white;
-            border: none;
-            cursor: pointer;
-            display: block;
-        }
-        .lang-button:hover {
-            background-color: #003F7D;
-        }
-    </style>
-    <script>
-        function toggleLanguage() {
-            const lang = document.body.getAttribute('lang');
-            if (lang === 'pt') {
-                document.body.setAttribute('lang', 'en');
-                document.querySelector('h1').innerText = 'Controlideal';
-                document.querySelector('header p').innerText = 'Engineering and Management Solutions';
-                document.querySelector('a[href="#sobre"]').innerText = 'About Us';
-                document.querySelector('a[href="#servicos"]').innerText = 'Services';
-                document.querySelector('a[href="#porque"]').innerText = 'Why Controlideal';
-                document.querySelector('a[href="#contacto"]').innerText = 'Contact';
-                document.querySelector('#sobre h2').innerText = 'About Us';
-                document.querySelector('#sobre p').innerHTML = `
-                    <strong>Controlideal</strong> was founded in 2020, during the pandemic, 
-                    a period that brought unprecedented challenges to businesses. In response, 
-                    we adapted our experience and knowledge to support organizations facing difficulties.
-                `;
-                document.querySelector('#servicos h2').innerText = 'Services';
-                document.querySelector('#servicos ul').innerHTML = `
-                    <li>Consulting in Production, Transmission, and Distribution of Electricity</li>
-                    <li>Project Management Consulting</li>
-                    <li>Business Management Processes</li>
-                    <li>Management Control and Financial Advice</li>
-                    <li>Company and/or Business Evaluations</li>
-                    <li>Business Plans</li>
-                    <li>Risk Analysis</li>
-                `;
-                document.querySelector('#porque h2').innerText = 'Why Controlideal';
-                document.querySelector('#porque p').innerText = 'With years of experience in the energy sector, Controlideal offers:';
-                document.querySelector('#porque ul').innerHTML = `
-                    <li>Experienced and highly qualified team</li>
-                    <li>Customized solutions for each client</li>
-                    <li>Proven results and excellence in every project</li>
-                `;
-                document.querySelector('#contacto h2').innerText = 'Contact';
-                document.querySelector('label[for="nome"]').innerText = 'Name:';
-                document.querySelector('label[for="email"]').innerText = 'Email:';
-                document.querySelector('label[for="mensagem"]').innerText = 'Message:';
-                document.querySelector('.form-container button').innerText = 'Send';
-                document.querySelector('footer p').innerText = '© 2025 Controlideal. All rights reserved.';
-            } else {
-                document.body.setAttribute('lang', 'pt');
-                location.reload();
+        
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column; text-align: center;
+            }
+
+            header img {
+                margin: 0 auto 15px auto;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 10px 0;
             }
         }
-    </script>
+    </style>
 </head>
-<body lang="pt">
+<body>
     <header>
-        <h1>Controlideal</h1>
-        <p>Soluções em Engenharia e Gestão</p>
+        <h1 id="title">Controlideal</h1>
+        <p id="tagline">Soluções em Engenharia e Gestão</p>
     </header>
-    <button class="lang-button" onclick="toggleLanguage()">English / Português</button>
+
     <nav>
-        <a href="#sobre">Sobre Nós</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#porque">Porquê a Controlideal</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#sobre" id="nav-about">Sobre Nós</a>
+        <a href="#servicos" id="nav-services">Serviços</a>
+        <a href="#porque" id="nav-why">Porquê a Controlideal</a>
+        <a href="#contacto" id="nav-contact">Contacto</a>
+        <a href="javascript:void(0);" id="toggle-language" onclick="toggleLanguage()">English</a>
     </nav>
+
     <section id="sobre" class="section">
-        <h2>Sobre Nós</h2>
-        <p>
-            A <strong>Controlideal</strong> foi fundada em 2020, em plena pandemia, um período que trouxe desafios inéditos para as empresas. 
-            Como resposta a esta realidade, decidimos adaptar a nossa experiência e conhecimento para apoiar as organizações que enfrentavam dificuldades.
-        </p>
+        <h2 id="about-title">Sobre Nós</h2>
+        <p id="about-text">A <strong>Controlideal</strong> foi fundada em 2020, em plena pandemia, um período que trouxe desafios inéditos para as empresas. Como resposta a esta realidade, decidimos adaptar a nossa experiência e conhecimento para apoiar as organizações que enfrentavam dificuldades.</p>
+        <p id="about-text-2">O projeto começou com uma visão clara: ajudar empresas a superar os desafios e a solidificar as suas operações. Cada um de nós trouxe para a Controlideal uma vasta experiência nas suas áreas de especialidade:</p>
+        <ul>
+            <li id="about-finance"><strong>Área Financeira:</strong> Com mais de 20 anos de experiência, um percurso sólido na gestão financeira, abrangendo desde a realização de inventários até à implementação de sistemas completos de controlo de gestão, elaboração de budgets anuais e análise de resultados. Inclui também a avaliação de negócios e processos de aquisição/venda de empresas, com base num profundo conhecimento sobre como avaliar e potenciar oportunidades no mercado.</li>
+            <li id="about-engineering"><strong>Engenharia:</strong> 25 anos de experiência nos ramos da engenharia elétrica e mecânica, com foco em soluções técnicas que melhoram a eficiência e os processos operacionais das empresas. 20 anos de experiencia em sistemas de Produção, Transporte e Distribuição de Energia Eléctrica.</li>
+        </ul>
+        <p id="about-text-3">Desde o início, percebemos que muitas empresas enfrentam desafios sem acesso ao aconselhamento ou às soluções adequadas. Foi assim que nasceu a nossa missão: oferecer suporte especializado para que os nossos clientes possam solidificar os seus negócios, melhorar processos e explorar todo o seu potencial.</p>
+        <p id="about-text-4">A <strong>Controlideal</strong> é mais do que uma empresa de consultoria; somos parceiros comprometidos em transformar desafios em oportunidades e apoiar o crescimento sustentável dos nossos clientes.</p>
     </section>
+
     <section id="servicos" class="section">
-        <h2>Serviços</h2>
+        <h2 id="services-title">Serviços</h2>
         <ul>
-            <li>Consultoria em Produção, Transmissão e Distribuição de Energia Eléctrica</li>
-            <li>Consultoria em Gestão de Projetos</li>
-            <li>Processos de Gestão Empresarial</li>
-            <li>Controlo de Gestão e Aconselhamento Financeiro</li>
-            <li>Avaliações de empresas e/ou Negócios</li>
-            <li>Plano de Negócio</li>
-            <li>Análise de Riscos</li>
+            <li id="services-1">Consultoria em Produção, Transmissão e Distribuição de Energia Eléctrica</li>
+            <li id="services-2">Consultoria em Gestão de Projectos</li>
+            <li id="services-3">Processos de Gestão Empresarial</li>
+            <li id="services-4">Controlo de Gestão e Aconselhamento Financeiro</li>
+            <li id="services-5">Avaliações de empresas e/ou Negócios</li>
+            <li id="services-6">Plano de Negócio</li>
+            <li id="services-7">Análise de Riscos</li>
         </ul>
     </section>
+
     <section id="porque" class="section">
-        <h2>Porquê a Controlideal</h2>
-        <p>Com anos de experiência no setor energético, a Controlideal oferece:</p>
+        <h2 id="why-title">Porquê a Controlideal</h2>
         <ul>
-            <li>Equipa experiente e altamente qualificada</li>
-            <li>Soluções personalizadas para cada cliente</li>
-            <li>Resultados comprovados e excelência em cada projeto</li>
+            <li id="why-1">Equipa experiente e altamente qualificada</li>
+            <li id="why-2">Soluções personalizadas para cada cliente</li>
+            <li id="why-3">Resultados comprovados e excelência em cada projeto</li>
         </ul>
     </section>
+
     <section id="contacto" class="section">
-        <h2>Contacto</h2>
+        <h2 id="contact-title">Contacto</h2>
         <div class="form-container">
             <form action="https://formspree.io/f/xqaageja" method="POST">
-                <label for="nome">Nome:</label>
+                <label for="nome" id="name-label">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
-                <label for="email">Email:</label>
+                <label for="email" id="email-label">Email:</label>
                 <input type="email" id="email" name="email" required>
-                <label for="mensagem">Mensagem:</label>
+                <label for="mensagem" id="message-label">Mensagem:</label>
                 <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-                <button type="submit">Enviar</button>
+                <button type="submit" id="submit-button">Enviar</button>
             </form>
         </div>
     </section>
+
     <footer>
-        <p>&copy; 2025 Controlideal. Todos os direitos reservados.</p>
+        <p id="footer-text">&copy; 2025 Controlideal. Todos os direitos reservados.</p>
     </footer>
+
     <img src="logo.jpg" alt="Logo da Controlideal" style="float: right; width: 200px; height: auto;">
+
+    <script>
+        const translations = {
+            "title": "Controlideal",
+            "tagline": "Engineering and Management Solutions",
+            "nav-about": "About Us",
+            "nav-services": "Services",
+            "nav-why": "Why Controlideal",
+            "nav-contact": "Contact",
+            "toggle-language": "Português",
+            "about-title": "About Us",
+            "about-text": "Controlideal was founded in 2020, during the pandemic, a period that brought unprecedented challenges for businesses. In response to this reality, we decided to adapt our experience and knowledge to support organizations facing difficulties.",
+            "about-text-2": "The project started with a clear vision: to help companies overcome challenges and solidify their operations. Each of us brought extensive experience in their areas of expertise:",
+            "about-finance": "<strong>Financial Area:</strong> With over 20 years of experience, a solid track record in financial management, from inventory control to implementing full management control systems, creating annual budgets, and analyzing results. This also includes business evaluations and acquisition/sale processes based on deep knowledge of how to assess and capitalize on market opportunities.",
+            "about-engineering": "<strong>Engineering:</strong> 25 years of experience in electrical and mechanical engineering, with a focus on technical solutions that improve efficiency and operational processes in businesses. 20 years of experience in Production, Transport, and Distribution of Electric Energy systems.",
+            "about-text-3": "From the beginning, we realized that many companies face challenges without access to appropriate advice or solutions. This is how our mission was born: to offer specialized support so that our clients can solidify their businesses, improve processes, and unlock their full potential.",
+            "about-text-4": "Controlideal is more than a consultancy company; we are partners committed to turning challenges into opportunities and supporting the sustainable growth of our clients.",
+            "services-title": "Services",
+            "services-1": "Consulting in Production, Transmission, and Distribution of Electric Energy",
+            "services-2": "Project Management Consulting",
+            "services-3": "Business Management Processes",
+            "services-4": "Management Control and Financial Advisory",
+            "services-5": "Business and/or Company Valuations",
+            "services-6": "Business Plan",
+            "services-7": "Risk Analysis",
+            "why-title": "Why Controlideal",
+            "why-1": "Experienced and highly qualified team",
+            "why-2": "Tailored solutions for each client",
+            "why-3": "Proven results and excellence in every project",
+            "contact-title": "Contact",
+            "name-label": "Name:",
+            "email-label": "Email:",
+            "message-label": "Message:",
+            "submit-button": "Submit",
+            "footer-text": "&copy; 2025 Controlideal. All rights reserved."
+        };
+
+        function toggleLanguage() {
+            const lang = document.documentElement.lang === "pt" ? "en" : "pt";
+            document.documentElement.lang = lang;
+
+            Object.keys(translations).forEach(key => {
+                const element = document.getElementById(key);
+                if (element) {
+                    element.textContent = translations[key];
+                }
+            });
+        }
+    </script>
 </body>
 </html>
-
