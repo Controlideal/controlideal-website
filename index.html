@@ -151,8 +151,9 @@
 
     <footer>
         <p id="footer-text">&copy; 2025 Controlideal. Todos os direitos reservados.</p>
-        <img src="logo.jpg" alt="Logo da Controlideal" style="float: right; width: 200px; height: auto;">
     </footer>
+
+    <img src="logo.jpg" alt="Logo da Controlideal" style="float: right; width: 200px; height: auto;">
 
     <script>
         const translations = {
@@ -188,7 +189,7 @@
                 "email-label": "Email:",
                 "message-label": "Mensagem:",
                 "submit-button": "Enviar",
-                "footer-text": "2025 Controlideal. Todos os direitos reservados."
+                "footer-text": "&copy; 2025 Controlideal. Todos os direitos reservados."
             },
 
             "en": {
@@ -233,7 +234,7 @@
             
             const keys = Object.keys(translations[lang]);
             keys.forEach(key => {
-                document.getElementById(key).textContent = translations[lang][key];
+                document.getElementById(key).innerHTML = translations[lang][key];
             });
             
             document.getElementById("toggle-language").textContent = lang === "en" ? "Português" : "English";
